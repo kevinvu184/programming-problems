@@ -14,18 +14,16 @@ func main() {
 
 		flag := true
 		runes := []rune(text)
-		for i := 0; i < len(runes)-1; i++ {
-			if runes[i]+1 != runes[i+1] {
-				flag = false
-				break
-			}
+		for i := 0; i < len(runes)-1 && flag; i++ {
+			flag = runes[i]+1 == runes[i+1]
 		}
 
-		if flag {
-			fmt.Printf("YES\n")
-		} else {
-			fmt.Printf("NO\n")
-		}
+		fmt.Printf("%s\n", func() string {
+			if flag {
+				return "YES"
+			}
+			return "NO"
+		}())
 	}
 }
 
