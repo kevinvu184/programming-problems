@@ -1,5 +1,5 @@
 # Competitive programming
 
 ```
-go run codeforces/a-diverse-strings.go < codeforces/in > codeforces/out
+go run codeforces/0-a-diverse-strings.go < in > out
 ```
