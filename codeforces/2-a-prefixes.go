@@ -10,16 +10,10 @@ func main() {
 
 	runes := []rune(text)
 	ops := 0
-	for i := 0; i < len(runes); i++ {
-		if i%2 == 1 {
-			if runes[i] == runes[i-1] {
-				if runes[i] == 'a' {
-					runes[i] = 'b'
-				} else {
-					runes[i] = 'a'
-				}
-				ops++
-			}
+	for i := 1; i < len(runes); i += 2 {
+		if runes[i] == runes[i-1] {
+			runes[i] = 'a' + 'b' - runes[i]
+			ops++
 		}
 	}
 
