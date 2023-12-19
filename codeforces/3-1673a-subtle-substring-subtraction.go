@@ -18,7 +18,7 @@ func main() {
 				if len(runes)%2 == 0 {
 					a += sum(runes)
 					runes = []rune{}
-				} else if len(runes) > 1 {
+				} else {
 					if runes[0] > runes[len(runes)-1] {
 						a += sum(runes[0 : len(runes)-1])
 						runes = runes[len(runes)-1:]
@@ -53,19 +53,10 @@ func main() {
 	}
 }
 
-func sum(r []rune) int {
+func sum(rs []rune) int {
 	sum := 0
-	for i := 0; i < len(r); i++ {
-		sum += int(r[i]-'0') - 48
+	for _, r := range rs {
+		sum += int(r-'0') - 48
 	}
 	return sum
 }
-
-// Remove a rune from the slice while maintaining order
-// a := []rune{'A', 'B', 'C', 'D', 'E'}
-// i := 2
-// fmt.Printf("%c %d\n", a, len(a))
-// copy(a[i:], a[i+1:]) // Shift a[i+1:] left one index.
-// a[len(a)-1] = 0      // Erase last element (write zero value).
-// a = a[:len(a)-1]     // Truncate slice.
-// fmt.Printf("%c %d\n", a, len(a))
