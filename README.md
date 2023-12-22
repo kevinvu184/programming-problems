@@ -1,9 +1,5 @@
 ```
 .
-├── 0.in
-├── 0.out
-├── 1.in
-├── 1.out
 ├── README.md
 ├── advent-of-code
 │   └── 0-2023-day-9-mirage-maintenance-p1.go
@@ -24,5 +20,5 @@
 └── lib
     └── lib.go
 
-5 directories, 19 files
+5 directories, 15 files
 ```
