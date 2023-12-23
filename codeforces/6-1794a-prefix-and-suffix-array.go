@@ -19,22 +19,20 @@ func main() {
 		}
 
 		flag := true
-		for i := 1; i < n; i++ {
-			a := ""
-			b := ""
-			for _, v := range inputs {
-				if len(v) == i && a == "" {
-					a = v
-				} else if len(v) == i && a != "" {
-					b = v
-				}
+		a := ""
+		b := ""
+		for _, v := range inputs {
+			if len(v) == (n-1) && a == "" {
+				a = v
+			} else if len(v) == (n-1) && a != "" {
+				b = v
 			}
-			x := 0
-			y := i - 1
-			for ; x < i; x, y = x+1, y-1 {
-				if a[x] != b[y] {
-					flag = false
-				}
+		}
+		x := 0
+		y := (n - 1) - 1
+		for ; x < (n - 1); x, y = x+1, y-1 {
+			if a[x] != b[y] {
+				flag = false
 			}
 		}
 
