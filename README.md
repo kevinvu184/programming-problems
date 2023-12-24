@@ -10,7 +10,9 @@
 │   ├── 3-1673a-subtle-substring-subtraction.go
 │   ├── 4-1805b-the-string-has-a-target.go
 │   ├── 5-1284a-new-year-and-naming.go
-│   └── 6-1794a-prefix-and-suffix-array.go
+│   ├── 6-1794a-prefix-and-suffix-array.go
+│   ├── 7-1894a-secret-sport.go
+│   └── 8-1139a-even-substrings.go
 ├── leetcode
 │   ├── 0-1480-running-sum-of-1d-array.go
 │   ├── 1-1672-richest-customer-wealth.go
@@ -20,5 +22,5 @@
 └── lib
     └── lib.go
 
-5 directories, 15 files
+5 directories, 17 files
 ```
